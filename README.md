@@ -1,3 +1,9 @@
+****
+
+*This fork only updates the defined symphony requirements in the composer.json to include `|^6.0`.*
+
+****
+
 ![PHP-VCR](https://user-images.githubusercontent.com/133832/27151811-0d95c6c4-514c-11e7-834e-eff1eec2ea16.png)
 
 [![Build Status](https://github.com/php-vcr/php-vcr/actions/workflows/tests.yml/badge.svg)](https://github.com/php-vcr/php-vcr/actions/workflows/tests.yml)
