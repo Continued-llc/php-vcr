@@ -42,7 +42,7 @@ class Configuration
     private $availableLibraryHooks = [
         'stream_wrapper' => 'VCR\LibraryHooks\StreamWrapperHook',
         'curl' => 'VCR\LibraryHooks\CurlHook',
-        'soap' => 'VCR\LibraryHooks\SoapHook',
+        //'soap' => 'VCR\LibraryHooks\SoapHook',
     ];
 
     /**
