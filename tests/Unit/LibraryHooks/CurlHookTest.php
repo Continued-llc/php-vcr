@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace VCR\Tests\Unit\LibraryHooks;
 
 use Assert\Assertion;
-use Closure;
 use PHPUnit\Framework\TestCase;
 use VCR\CodeTransform\CurlCodeTransform;
 use VCR\Configuration;
@@ -227,7 +226,7 @@ final class CurlHookTest extends TestCase
         curl_close($curlHandle);
 
         $this->assertIsArray($info, 'curl_getinfo() should return an array.');
-        $this->assertCount(21, $info, 'curl_getinfo() should return 21 values.');
+        $this->assertCount(22, $info, 'curl_getinfo() should return 22 values.');
         $this->curlHook->disable();
     }
 
@@ -466,10 +465,10 @@ final class CurlHookTest extends TestCase
         $this->curlHook->disable();
     }
 
-    protected function getTestCallback(string $statusCode = '200'): Closure
+    protected function getTestCallback(string $statusCode = '200'): \Closure
     {
         $testClass = $this;
 
-        return Closure::fromCallable(fn () => new Response($statusCode, [], $testClass->expected));
+        return \Closure::fromCallable(fn () => new Response($statusCode, [], $testClass->expected));
     }
 }
